@@ -60,7 +60,10 @@ button {
   background-color: rgb(179, 233, 179);
 }
 button:active {
-  background-color: lightblue;
+  color: lightblue;
+}
+.task button:last-child {
+  background-color: lightcoral;
 }
 #add-button {
   width: 30px;
@@ -74,4 +77,17 @@ button:active {
   outline: none;
   border-bottom: 2px solid lightblue;
   transition: 0.2s;
+}
+
+.task-content{
+  width: calc(100% - 70px);
+  padding-left: 20px;
+}
+.task-done {
+  text-decoration: line-through;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+.toggle-done {
+  background-color: lightgray;
 }
