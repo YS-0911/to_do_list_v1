@@ -12,16 +12,16 @@
   <div class="container">
     <h1>Todo List</h1>
     <div class="input-area">
-      <input type="text" id="task-input">
+      <input type="text" id="task-input" placeholder="입력하세요" onkeypress="keyPress(event)">
       <button id="add-button"><i class="fa-solid fa-plus"></i></button>
     </div>
 
     <section class="task-area">
       <nav class="task-tabs">
         <div id="under-line"></div>
-        <a href="#">전체</a>
-        <a href="#">진행중</a>
-        <a href="#">완료</a>
+        <div id="all">전체</div>
+        <div id="onGoing">진행중</div>
+        <div id="done">완료</div>
       </nav>
       <div id="task-board">
         <!-- <div class="task">
