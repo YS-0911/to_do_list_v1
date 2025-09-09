@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-image: url("./src/bg_pc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: #fff;
+  min-height: 100vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.task-area {
+  border: 1px solid lightgray;
+  margin-top: 2em;
+}
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+.task-tabs a {
+  padding: 1em;
+}
+
+#under-line {
+  height: 4px;
+  background-color: lightgreen;
+  position: absolute;
+  width: 64px;
+  left: 0;
+  top: 40px;
+  padding: 0px;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+  background-color: rgb(179, 233, 179);
+}
+button:active {
+  background-color: lightblue;
+}
+#add-button {
+  width: 30px;
+}
+
+#task-input {
+  border: 0;
+  border-bottom: 2px solid green;
+}
+#task-input:focus {
+  outline: none;
+  border-bottom: 2px solid lightblue;
+  transition: 0.2s;
+}
