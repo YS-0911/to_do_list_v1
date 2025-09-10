@@ -12,7 +12,7 @@ let addButton = document.getElementById("add-button");
 let tabs = document.querySelectorAll(".task-tabs div");
 addButton.addEventListener("click",addTask);
 let taskList = [];
-let mode = "all";
+let mode = "onGoing";
 let filterList = [];
 
 for(let i=1; i<tabs.length;i++){
@@ -56,7 +56,7 @@ function render(mode){
   }else{
     list = filterList;
   }
-  
+
   let resultHTML = '';
   for(let i=0;i<list.length;i++){
     if(list[i].isComplete == true){
@@ -140,9 +140,13 @@ function randomIDGenerate(){
 
 // 언더바 이동
 function horizontalIndicator(e){
-  horizontalUnderLine.style.left = e.currentTarget.offsetLeft + "px";
+  horizontalUnderLine.style.left = e.currentTarget.offsetLeft + e.currentTarget.offsetWidth/2 + "px";
   horizontalUnderLine.style.width = e.currentTarget.offsetWidth + "px";
   horizontalUnderLine.style.top = e.currentTarget.offsetTop/4 + e.currentTarget.offsetHeight/4 - 1 + "px";
+  console.log(
+    horizontalUnderLine.style.left,
+    horizontalUnderLine.style.width,
+    horizontalUnderLine.style.top
+  )
 }
-
 horizontalMenus.forEach(menu=>menu.addEventListener("click",(e)=>horizontalIndicator(e)));

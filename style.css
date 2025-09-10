@@ -57,8 +57,9 @@ input {
   height: 30px;
   background-color: lightgreen;
   position: absolute;
-  width: 64px;
-  left: 42px;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 80px;
   top: 13px;
   padding: 0px;
   transition: 0.5s;
@@ -84,10 +85,17 @@ button {
   background-color: rgb(179, 233, 179);
 }
 button:active {
-  color: lightblue;
+  color: yellow;
 }
 .task button:last-child {
   background-color: lightcoral;
+}
+button:hover {
+  background-color: lightblue;
+}
+.task button:last-child:hover {
+  color: red;
+  background-color: lightblue;
 }
 #add-button {
   width: 30px;
