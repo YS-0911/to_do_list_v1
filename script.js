@@ -41,8 +41,9 @@ function addTask(){
     taskList.push(task);
     console.log(taskList);
     taskInput.value = "";
-    render(mode);
+    reRender();
   }
+  console.log(mode);
 }
 
 function render(mode){  
@@ -52,12 +53,10 @@ function render(mode){
   let list = [];
   if(mode === "all"){
     list = taskList;
-  }else if(mode === "onGoing"){
-    list = filterList;
   }else{
     list = filterList;
   }
-
+  
   let resultHTML = '';
   for(let i=0;i<list.length;i++){
     if(list[i].isComplete == true){
@@ -91,7 +90,7 @@ function toggleComplete(id){
       break;
     }
   }
-  filter();
+  reRender();
   // console.log(taskList);
 }
 
@@ -102,14 +101,18 @@ function deleteTask(id){
       break;
     }
   }
-  filter();
+  reRender();
   // console.log(taskList);
 }
 
 function filter(event){
   mode = event.target.id;
+  reRender();
+}
+
+function reRender(){
   filterList = [];
-  console.log("filter", mode);
+  console.log("filter :", mode);
   if(mode == "all"){
     render(mode);
   }else if(mode == "onGoing"){
