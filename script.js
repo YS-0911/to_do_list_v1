@@ -63,7 +63,7 @@ function render(mode){
       resultHTML += `
       <div class="task">
         <div class="task-done task-content">${list[i].taskContent}</div>
-        <div>
+        <div class="task-btn">
           <button class="toggle-done" onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-rotate-right"></i></button>
           <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash"></i></button>
         </div>
@@ -72,7 +72,7 @@ function render(mode){
       resultHTML += `
       <div class="task">
         <div class="task-content">${list[i].taskContent}</div>
-        <div>
+        <div class="task-btn">
           <button onclick="toggleComplete('${list[i].id}')"><i class="fa-solid fa-check"></i></button>
           <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash"></i></button>
         </div>

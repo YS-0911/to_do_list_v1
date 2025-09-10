@@ -25,6 +25,11 @@ body {
   padding: 20px;
   max-width: 500px;
 }
+@media (max-width:425px) {
+  .container {
+    width: 90%;
+  }
+}
 h1 {
   width: 100%;
   text-align: center;
@@ -74,6 +79,12 @@ input {
   display: flex;
   justify-content: space-between;
   padding: 1em;
+  border-bottom: 1px dotted lightgreen;
+}
+.task-btn {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 button {
@@ -114,6 +125,7 @@ button:hover {
 .task-content{
   width: calc(100% - 70px);
   padding-left: 20px;
+  word-break: break-all;
 }
 .task-done {
   text-decoration: line-through;
